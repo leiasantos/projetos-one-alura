@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --bg-color: #F3F5FC;
+    --primary-color: #0A3871;
+    --button-grey: #D8DFE8;
+    --text-grey-light: #495057;
+    --text-grey-dark: #343A40;
+    --text-grey-400: #45565F;
+}
+
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    min-height: 100vh;
+    padding: 40px;
+    gap: 80px;
+}
+
+/* HEADER - SOMENTE A LOGO */
+
+header.header__container{
+    width: 89px;
+    display: flex;
+    justify-content: center;
+    height: min-content;
+}
+
+main.main__container{
+    display: flex;
+    margin: 80px 0 32px 0;
+    width: 680px;
+}
+
+main.main__container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main.main__container form textarea{
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: 400;
+    outline: none;
+    resize: none;
+}
+
+main.main__container form textarea::placeholder{
+    color: var(--primary-color);
+}
+
+main.main__container form fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+}
+
+main.main__container form span{
+    color: var(--text-grey-400);
+    display: flex;
+    font-size: 12px;
+    gap: 8px;
+}
+
+main.main__container form .container__buttons{
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.container__buttons .form__button{
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 24px;
+    width: 100%;
+}
+
+.container__buttons .form__button:hover{
+    filter: brightness(80%);
+    transition: all ease-in-out .4s;
+}
+
+.container__buttons .form__button.bg-blue{
+    background-color: var(--primary-color);
+    color: #E9ECF8;
+}
+
+.container__buttons .form__button.bg-grey{
+    background-color: var(--button-grey);
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* ASIDE - LATERAL COM IMAGEM */
+aside.aside__container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    width: 400px;
+    background-color: white;
+    border-radius: 32px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+aside.aside__container.resultado{
+    justify-content: space-between;
+    padding: 32px;
+}
+
+aside.aside__container img{
+    width: 336px;
+}
+
+aside.aside__container article{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+aside.aside__container article h1{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+aside.aside__container article p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-grey-light);
+}
+
+aside .textarea__resultado{
+    font-size: 24px;
+    font-weight: 400;
+    color: #495057;
+    text-align: justify;
+    outline: none;
+    resize: none;
+}
+
+aside .botao__copiar{
+    background-color: transparent;
+    border: solid 1px var(--primary-color);
+    border-radius: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 24px;
+    width: 100%;
+}
+
+.button_copiar{
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 24px;
+    width: 100%;
+    background-color: var(--button-grey);
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+/* RESPONSIVO
+    1060px: TABLET
+    768px: CELULAR
+*/
+
+@media screen and (max-width: 1060px){
+    body{
+        flex-direction: column;
+        padding: 73px 40px 40px 40px;
+        gap: 56px;
+    }
+
+    header.header__container{
+        justify-content: flex-start;
+    }
+
+    aside.aside__container img{
+        display: none;
+    }
+
+    main.main__container{
+        margin: 0px;
+        width: 100%;
+    }
+
+    main.main__container form{
+        width: 100%;
+    }
+
+    main.main__container form textarea{
+        width: 100%;
+        height: 251px;
+    }
+
+    aside.aside__container{
+        padding: 32px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        padding: 24px 16px 40px 16px;
+    }
+
+    main.main__container form .container__buttons{
+        flex-direction: column;
+    }
+}

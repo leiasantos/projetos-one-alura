@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Challenge - Desafio I</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header__container">
+        <nav>
+            <a href="/" aria-label="link de navegação para página inicial">
+                <img src="assets/images/alura-logo.svg" alt="logo da empresa Alura" />
+            </a>
+        </nav>
+    </header>
+    
+    <main class="main__container">
+        <form id="form-pesquisa">
+            <textarea placeholder="Digite seu texto" id="text-area-pesquisa"></textarea>
+            <fieldset>
+                <span id="textAviso">
+                    <img src="assets/images/exclamation.svg" alt="icone de ponto de exclamação" />
+                    Apenas letras minúsculas e sem acento.
+                </span>
+    
+                <div class="container__buttons">
+                    <button type="submit" class="form__button bg-blue" id="botao-criptografar">Criptografar</button>
+                    <button type="submit" class="form__button bg-grey" id="botao-descriptografar">Descriptografar</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    
+<aside class="aside__container" id="container-pesquisa-resultado">
+    <img src="assets/images/illustration.svg" alt="ilustração de um garoto com uma bussola" />
+    <article>
+
+        <h1 id="iside_titulo">Nenhuma mensagem encontrada</h1>
+        <p id="mensage">Digite um texto que você deseja criptografar ou descriptografar.</p>
+    </article>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
